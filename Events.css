@@ -1,0 +1,104 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.topnav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.topnav a:hover {
+    background-color: #575757;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+}
+
+/* Events Section */
+.events-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Card */
+.event-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.event-info {
+    flex-grow: 1;
+}
+
+.event-info h2 {
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.event-details {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Registered Events Section */
+.registered-events {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.registered-events h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+button {
+    margin-top: 10px;
+}

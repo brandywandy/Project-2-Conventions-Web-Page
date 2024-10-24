@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Tech & Innovation Convention</title>
+    <link rel="stylesheet" href="Events.css">
+</head>
+<body>
+
+    <div class="topnav">
+        <a href="Splash.html">Home</a>
+        <a href="Guest.html">Guests</a>
+        <a class="active" href="Events.html">Events</a>
+    </div>
+
+    <div class="events-section">
+        <h1>Event Schedule</h1>
+
+        <!-- Event 1: AI in Healthcare -->
+        <div class="event-card">
+            <img src="speaker1.jpg" alt="Dr. Emily Carter">
+            <div class="event-info">
+                <h2 onclick="toggleEventInfo('event1')">AI in Healthcare</h2>
+                <p><strong>Time:</strong> 10:00 AM - 11:30 AM</p>
+                <div id="event1" class="event-details" style="display: none;">
+                    <p>Dr. Emily Carter will discuss the latest in AI healthcare innovations.</p>
+                    <button onclick="registerEvent('AI in Healthcare')">Register</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 2: Robotics: Building the Future -->
+        <div class="event-card">
+            <img src="speaker2.jpg" alt="John Doe">
+            <div class="event-info">
+                <h2 onclick="toggleEventInfo('event2')">Robotics: Building the Future</h2>
+                <p><strong>Time:</strong> 2:00 PM - 3:30 PM</p>
+                <div id="event2" class="event-details" style="display: none;">
+                    <p>John Doe will discuss the impact of robotics on the future of industrial operations.</p>
+                    <button onclick="registerEvent('Robotics: Building the Future')">Register</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 3: Tech Ethics -->
+        <div class="event-card">
+            <img src="speaker3.jpg" alt="Lisa Chang">
+            <div class="event-info">
+                <h2 onclick="toggleEventInfo('event3')">Tech Ethics: Navigating the Future Responsibly</h2>
+                <p><strong>Time:</strong> 11:00 AM - 12:30 PM</p>
+                <div id="event3" class="event-details" style="display: none;">
+                    <p>Lisa Chang will present the ethical concerns surrounding the rapid development of AI.</p>
+                    <button onclick="registerEvent('Tech Ethics')">Register</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registered Events Section -->
+        <div class="registered-events">
+            <h3>Registered Events:</h3>
+            <p id="registeredEvents">No events registered yet.</p>
+            <button onclick="unregisterAll()">Unregister For All Events</button>
+        </div>
+    </div>
+
+    <script>
+       let registeredEvents = [];
+
+// Arrow function to toggle event details visibility
+const toggleEventInfo = (id) => {
+    const element = document.getElementById(id);
+    element.style.display = element.style.display === "none" ? "block" : "none";  // Ternary operator
+};
+
+        // Arrow function to register for an event
+const registerEvent = (eventName) => {
+    if (!registeredEvents.includes(eventName)) {
+        registeredEvents.push(eventName);
+        document.getElementById('registeredEvents').innerText = `Registered events: ${registeredEvents.join(', ')}`;  // Using template literals
+    } else {
+        alert('You have already registered for this event.');
+    }
+};
+
+// Arrow function to unregister from all events
+const unregisterAll = () => {
+    registeredEvents = [];
+    document.getElementById('registeredEvents').innerText = 'No events registered yet.';
+};
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guests - Tech & Innovation Convention</title>
+    <link rel="stylesheet" href="Guest.css">
+</head>
+<body>
+
+    <div class="topnav">
+        <a href="Splash.html">Home</a>
+        <a class="active" href="Guest.html">Guests</a>
+        <a href="Events.html">Events</a>
+    </div>
+
+    <div class="guests-section">
+        <h1>Featured Guests</h1>
+
+        <!-- Guest 1: Dr. Emily Carter -->
+        <div class="guest-card">
+            <img src="speaker1.jpg" alt="Dr. Emily Carter">
+            <div class="guest-info">
+                <h2>Dr. Emily Carter</h2>
+                <button onclick="toggleInfo('guest1')">Show More</button>
+                <div id="guest1" class="details" style="display: none;">
+                    <p>Dr. Emily Carter is a leading expert in AI applications for healthcare. With over 20 years of experience, she has transformed healthcare AI technology by making it more accessible to doctors and medical institutions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guest 2: John Doe -->
+        <div class="guest-card">
+            <img src="speaker2.jpg" alt="John Doe">
+            <div class="guest-info">
+                <h2>John Doe</h2>
+                <button onclick="toggleInfo('guest2')">Show More</button>
+                <div id="guest2" class="details" style="display: none;">
+                    <p>John Doe is the CEO of Robotics Ventures, a pioneer in industrial robotic automation. He will share his insights on how robots are reshaping manufacturing and production across the globe.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guest 3: Lisa Chang -->
+        <div class="guest-card">
+            <img src="speaker3.jpg" alt="Lisa Chang">
+            <div class="guest-info">
+                <h2>Lisa Chang</h2>
+                <button onclick="toggleInfo('guest3')">Show More</button>
+                <div id="guest3" class="details" style="display: none;">
+                    <p>Lisa Chang is an industry leader in technology ethics. She will discuss the ethical dilemmas facing tech developers and the responsibilities of tech companies in the rapid age of AI and automation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleInfo = (id) => {
+    const element = document.getElementById(id);
+    element.style.display = element.style.display === "none" ? "block" : "none";  // Ternary operator
+};
+
+    </script>
+</body>
+</html>
